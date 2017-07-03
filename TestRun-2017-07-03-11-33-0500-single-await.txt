@@ -1,0 +1,58 @@
+1: Test single-await methods.
+2: Test double-await methods.
+1
+Start
+Warming single_await/await_service up...
+Warming single_await/return_task_from_service up...
+Warming single_await/wait_service up...
+
+Iteration 1 of 10
+Took 00:00:15.9286289 to process 150 requests to single_await/await_service
+Took 00:00:12.9643017 to process 150 requests to single_await/return_task_from_service
+Took 00:02:00.0093817 to process 150 requests to single_await/wait_service
+
+Iteration 2 of 10
+Took 00:00:45.7725806 to process 150 requests to single_await/await_service
+Took 00:00:23.2590947 to process 150 requests to single_await/return_task_from_service
+Took 00:00:33.7501909 to process 150 requests to single_await/wait_service
+
+Iteration 3 of 10
+Took 00:00:22.5046296 to process 150 requests to single_await/await_service
+Took 00:00:22.4470317 to process 150 requests to single_await/return_task_from_service
+Took 00:00:23.8874871 to process 150 requests to single_await/wait_service
+
+Iteration 4 of 10
+Took 00:00:23.3100494 to process 150 requests to single_await/await_service
+Took 00:00:22.1896934 to process 150 requests to single_await/return_task_from_service
+Took 00:00:34.5959711 to process 150 requests to single_await/wait_service
+
+Iteration 5 of 10
+Took 00:00:23.2827247 to process 150 requests to single_await/await_service
+Took 00:00:21.5515285 to process 150 requests to single_await/return_task_from_service
+Took 00:00:19.2204402 to process 150 requests to single_await/wait_service
+
+Iteration 6 of 10
+Took 00:00:22.9532110 to process 150 requests to single_await/await_service
+Took 00:00:22.8350825 to process 150 requests to single_await/return_task_from_service
+Took 00:00:22.3420316 to process 150 requests to single_await/wait_service
+
+Iteration 7 of 10
+Took 00:00:22.8032764 to process 150 requests to single_await/await_service
+Took 00:00:23.9482260 to process 150 requests to single_await/return_task_from_service
+Took 00:00:37.6565186 to process 150 requests to single_await/wait_service
+
+Iteration 8 of 10
+Took 00:00:21.1623570 to process 150 requests to single_await/await_service
+Took 00:00:22.2647478 to process 150 requests to single_await/return_task_from_service
+Took 00:00:22.6204179 to process 150 requests to single_await/wait_service
+
+Iteration 9 of 10
+Took 00:00:19.4836783 to process 150 requests to single_await/await_service
+Took 00:00:23.7822657 to process 150 requests to single_await/return_task_from_service
+Took 00:00:44.1746696 to process 150 requests to single_await/wait_service
+
+Iteration 10 of 10
+Took 00:00:22.4785086 to process 150 requests to single_await/await_service
+Took 00:00:22.0357781 to process 150 requests to single_await/return_task_from_service
+Took 00:00:25.6055331 to process 150 requests to single_await/wait_service
+Press ENTER to continue . . .
