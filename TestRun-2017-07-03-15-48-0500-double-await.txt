@@ -1,0 +1,153 @@
+1: Test single-await methods.
+2: Test double-await methods.
+2
+Start
+Warming double_await/await_service_twice up...
+Took 00:00:05.1963158 to process 1 requests to double_await/await_service_twice
+Warming double_await/wait_on_first_result up...
+Took 00:00:03.0547476 to process 1 requests to double_await/wait_on_first_result
+Warming double_await/wait_on_both_results up...
+Took 00:00:03.0395392 to process 1 requests to double_await/wait_on_both_results
+Warming double_await/use_result_then_await up...
+Took 00:00:03.0774146 to process 1 requests to double_await/use_result_then_await
+Warming double_await/use_result_then_result up...
+Took 00:00:03.0490590 to process 1 requests to double_await/use_result_then_result
+
+Iteration 1 of 10
+Took 00:00:05.3286415 to process 150 requests to double_await/await_service_twice
+Cooling down for 00:00:30... Done.
+55 exception(s): The connection with the server was terminated abnormally
+Took 00:01:34.2090431 to process 150 requests to double_await/wait_on_first_result
+Cooling down for 00:02:00... Done.
+Took 00:02:02.5004950 to process 150 requests to double_await/wait_on_both_results
+Cooling down for 00:00:30... Done.
+Took 00:00:09.8929960 to process 150 requests to double_await/use_result_then_await
+Cooling down for 00:00:30... Done.
+56 exception(s): The connection with the server was terminated abnormally
+Took 00:01:34.8441106 to process 150 requests to double_await/use_result_then_result
+Cooling down for 00:02:00... Done.
+
+Iteration 2 of 10
+Took 00:00:05.2615259 to process 150 requests to double_await/await_service_twice
+Cooling down for 00:00:30... Done.
+56 exception(s): The connection with the server was terminated abnormally
+Took 00:01:34.2992228 to process 150 requests to double_await/wait_on_first_result
+Cooling down for 00:02:00... Done.
+Took 00:02:01.7147100 to process 150 requests to double_await/wait_on_both_results
+Cooling down for 00:00:30... Done.
+Took 00:00:08.1594340 to process 150 requests to double_await/use_result_then_await
+Cooling down for 00:00:30... Done.
+57 exception(s): The connection with the server was terminated abnormally
+Took 00:01:35.3757150 to process 150 requests to double_await/use_result_then_result
+Cooling down for 00:02:00... Done.
+
+Iteration 3 of 10
+Took 00:00:07.0705285 to process 150 requests to double_await/await_service_twice
+Cooling down for 00:00:30... Done.
+55 exception(s): The connection with the server was terminated abnormally
+Took 00:01:35.1299136 to process 150 requests to double_await/wait_on_first_result
+Cooling down for 00:02:00... Done.
+Took 00:02:00.3030429 to process 150 requests to double_await/wait_on_both_results
+Cooling down for 00:00:30... Done.
+Took 00:00:11.3145302 to process 150 requests to double_await/use_result_then_await
+Cooling down for 00:00:30... Done.
+58 exception(s): The connection with the server was terminated abnormally
+Took 00:01:34.7532825 to process 150 requests to double_await/use_result_then_result
+Cooling down for 00:02:00... Done.
+
+Iteration 4 of 10
+Took 00:00:04.9468124 to process 150 requests to double_await/await_service_twice
+Cooling down for 00:00:30... Done.
+55 exception(s): The connection with the server was terminated abnormally
+Took 00:01:34.7269706 to process 150 requests to double_await/wait_on_first_result
+Cooling down for 00:02:00... Done.
+Took 00:02:03.9496776 to process 150 requests to double_await/wait_on_both_results
+Cooling down for 00:00:30... Done.
+Took 00:02:02.0964060 to process 150 requests to double_await/use_result_then_await
+Cooling down for 00:00:30... Done.
+Took 00:00:08.0687901 to process 150 requests to double_await/use_result_then_result
+Cooling down for 00:00:30... Done.
+
+Iteration 5 of 10
+Took 00:00:06.0099114 to process 150 requests to double_await/await_service_twice
+Cooling down for 00:00:30... Done.
+57 exception(s): The connection with the server was terminated abnormally
+Took 00:01:34.9806599 to process 150 requests to double_await/wait_on_first_result
+Cooling down for 00:02:00... Done.
+Took 00:02:00.9726885 to process 150 requests to double_await/wait_on_both_results
+Cooling down for 00:00:30... Done.
+Took 00:00:06.9553240 to process 150 requests to double_await/use_result_then_await
+Cooling down for 00:00:30... Done.
+53 exception(s): The connection with the server was terminated abnormally
+Took 00:01:34.8767928 to process 150 requests to double_await/use_result_then_result
+Cooling down for 00:02:00... Done.
+
+Iteration 6 of 10
+Took 00:00:05.0913714 to process 150 requests to double_await/await_service_twice
+Cooling down for 00:00:30... Done.
+57 exception(s): The connection with the server was terminated abnormally
+Took 00:01:33.8857227 to process 150 requests to double_await/wait_on_first_result
+Cooling down for 00:02:00... Done.
+Took 00:02:01.2338312 to process 150 requests to double_await/wait_on_both_results
+Cooling down for 00:00:30... Done.
+Took 00:00:10.2584599 to process 150 requests to double_await/use_result_then_await
+Cooling down for 00:00:30... Done.
+56 exception(s): The connection with the server was terminated abnormally
+Took 00:01:34.7313753 to process 150 requests to double_await/use_result_then_result
+Cooling down for 00:02:00... Done.
+
+Iteration 7 of 10
+Took 00:00:05.1888622 to process 150 requests to double_await/await_service_twice
+Cooling down for 00:00:30... Done.
+57 exception(s): The connection with the server was terminated abnormally
+Took 00:01:33.9661468 to process 150 requests to double_await/wait_on_first_result
+Cooling down for 00:02:00... Done.
+Took 00:02:01.8754809 to process 150 requests to double_await/wait_on_both_results
+Cooling down for 00:00:30... Done.
+Took 00:00:19.5113810 to process 150 requests to double_await/use_result_then_await
+Cooling down for 00:00:30... Done.
+57 exception(s): The connection with the server was terminated abnormally
+Took 00:01:34.3110648 to process 150 requests to double_await/use_result_then_result
+Cooling down for 00:02:00... Done.
+
+Iteration 8 of 10
+Took 00:00:05.4107532 to process 150 requests to double_await/await_service_twice
+Cooling down for 00:00:30... Done.
+56 exception(s): The connection with the server was terminated abnormally
+Took 00:01:34.9631030 to process 150 requests to double_await/wait_on_first_result
+Cooling down for 00:02:00... Done.
+Took 00:02:03.4363656 to process 150 requests to double_await/wait_on_both_results
+Cooling down for 00:00:30... Done.
+Took 00:00:27.7102395 to process 150 requests to double_await/use_result_then_await
+Cooling down for 00:00:30... Done.
+56 exception(s): The connection with the server was terminated abnormally
+Took 00:01:33.8324996 to process 150 requests to double_await/use_result_then_result
+Cooling down for 00:02:00... Done.
+
+Iteration 9 of 10
+Took 00:00:05.1695130 to process 150 requests to double_await/await_service_twice
+Cooling down for 00:00:30... Done.
+56 exception(s): The connection with the server was terminated abnormally
+Took 00:01:34.8081452 to process 150 requests to double_await/wait_on_first_result
+Cooling down for 00:02:00... Done.
+Took 00:02:00.5124089 to process 150 requests to double_await/wait_on_both_results
+Cooling down for 00:00:30... Done.
+Took 00:02:01.9501577 to process 150 requests to double_await/use_result_then_await
+Cooling down for 00:00:30... Done.
+Took 00:00:21.9969777 to process 150 requests to double_await/use_result_then_result
+Cooling down for 00:00:30... Done.
+
+Iteration 10 of 10
+Took 00:00:05.4959757 to process 150 requests to double_await/await_service_twice
+Cooling down for 00:00:30... Done.
+57 exception(s): The connection with the server was terminated abnormally
+Took 00:01:34.8126354 to process 150 requests to double_await/wait_on_first_result
+Cooling down for 00:02:00... Done.
+Took 00:02:03.6159399 to process 150 requests to double_await/wait_on_both_results
+Cooling down for 00:00:30... Done.
+Took 00:00:07.1805313 to process 150 requests to double_await/use_result_then_await
+Cooling down for 00:00:30... Done.
+57 exception(s): The connection with the server was terminated abnormally
+Took 00:01:34.2165291 to process 150 requests to double_await/use_result_then_result
+Cooling down for 00:02:00... Done.
+Press ENTER to continue . . .

@@ -17,7 +17,8 @@ namespace TestAwaitApproaches.Client
         private const int Iterations = 10;
         private const int RequestsPerIteration = 150;
 
-        private static readonly TimeSpan CooldownPeriod = TimeSpan.FromMinutes(2);
+        private static readonly TimeSpan CooldownPeriodError = TimeSpan.FromMinutes(2);
+        private static readonly TimeSpan CooldownPeriodNoError = TimeSpan.FromSeconds(30);
 
         static void Main(string[] args)
         {
@@ -75,7 +76,7 @@ namespace TestAwaitApproaches.Client
             foreach (var action in actions)
             {
                 Console.WriteLine($"Warming {action} up...");
-                ExecuteActions(1, action);
+                ExecuteActions(1, action, cooldown: false);
             }
 
             for (var i = 0; i < Iterations; i++)
@@ -84,22 +85,16 @@ namespace TestAwaitApproaches.Client
                 Console.WriteLine($"Iteration {i + 1} of {Iterations}");
                 foreach (var action in actions)
                 {
-                    Test(RequestsPerIteration, action);
+                    ExecuteActions(RequestsPerIteration, action);
                 }
             }
         }
 
-        private static void Test(int count, string action)
+        private static void ExecuteActions(int count, string action, bool cooldown = true)
         {
             var stopwatch = Stopwatch.StartNew();
 
-            ExecuteActions(count, action);
-
-            Console.WriteLine($"Took {stopwatch.Elapsed} to process {count} requests to {action}");
-        }
-
-        private static void ExecuteActions(int count, string action)
-        {
+            var errorHappened = false;
             var tasks = Enumerable.Repeat(true, count).Select(x => DoRequest(action)).ToArray();
             try
             {
@@ -113,8 +108,17 @@ namespace TestAwaitApproaches.Client
                     Console.WriteLine($"{eg.Count():N0} exception(s): {eg.Key}");
                 }
 
-                Console.WriteLine($"Cooling down for {CooldownPeriod}");
-                Thread.Sleep(CooldownPeriod);
+                errorHappened = true;
+            }
+
+            Console.WriteLine($"Took {stopwatch.Elapsed} to process {count} requests to {action}");
+
+            if (cooldown)
+            {
+                var coolDownTime = errorHappened ? CooldownPeriodError : CooldownPeriodNoError;
+                Console.Write($"Cooling down for {coolDownTime}... ");
+                Thread.Sleep(coolDownTime);
+                Console.WriteLine("Done.");
             }
         }
 

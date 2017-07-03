@@ -1,0 +1,101 @@
+1: Test single-await methods.
+2: Test double-await methods.
+1
+Start
+Warming single_await/await_service up...
+Took 00:00:03.5321488 to process 1 requests to single_await/await_service
+Warming single_await/return_task_from_service up...
+Took 00:00:01.5242312 to process 1 requests to single_await/return_task_from_service
+Warming single_await/wait_service up...
+Took 00:00:01.5221137 to process 1 requests to single_await/wait_service
+
+Iteration 1 of 10
+Took 00:00:03.5673839 to process 150 requests to single_await/await_service
+Cooling down for 00:00:30... Done.
+Took 00:00:03.8146045 to process 150 requests to single_await/return_task_from_service
+Cooling down for 00:00:30... Done.
+56 exception(s): The connection with the server was terminated abnormally
+Took 00:01:33.2888360 to process 150 requests to single_await/wait_service
+Cooling down for 00:02:00... Done.
+
+Iteration 2 of 10
+Took 00:00:03.7531552 to process 150 requests to single_await/await_service
+Cooling down for 00:00:30... Done.
+Took 00:00:47.3538914 to process 150 requests to single_await/return_task_from_service
+Cooling down for 00:00:30... Done.
+49 exception(s): The connection with the server was terminated abnormally
+Took 00:02:02.9396500 to process 150 requests to single_await/wait_service
+Cooling down for 00:02:00... Done.
+
+Iteration 3 of 10
+Took 00:00:05.7602637 to process 150 requests to single_await/await_service
+Cooling down for 00:00:30... Done.
+Took 00:00:03.7646599 to process 150 requests to single_await/return_task_from_service
+Cooling down for 00:00:30... Done.
+112 exception(s): The connection with the server was terminated abnormally
+Took 00:01:35.2055510 to process 150 requests to single_await/wait_service
+Cooling down for 00:02:00... Done.
+
+Iteration 4 of 10
+Took 00:00:04.0443705 to process 150 requests to single_await/await_service
+Cooling down for 00:00:30... Done.
+Took 00:00:04.0627215 to process 150 requests to single_await/return_task_from_service
+Cooling down for 00:00:30... Done.
+56 exception(s): The connection with the server was terminated abnormally
+Took 00:01:33.1679632 to process 150 requests to single_await/wait_service
+Cooling down for 00:02:00... Done.
+
+Iteration 5 of 10
+Took 00:00:03.9115905 to process 150 requests to single_await/await_service
+Cooling down for 00:00:30... Done.
+Took 00:00:03.8266224 to process 150 requests to single_await/return_task_from_service
+Cooling down for 00:00:30... Done.
+55 exception(s): The connection with the server was terminated abnormally
+Took 00:01:33.6626654 to process 150 requests to single_await/wait_service
+Cooling down for 00:02:00... Done.
+
+Iteration 6 of 10
+Took 00:00:03.7756416 to process 150 requests to single_await/await_service
+Cooling down for 00:00:30... Done.
+Took 00:00:03.8374019 to process 150 requests to single_await/return_task_from_service
+Cooling down for 00:00:30... Done.
+56 exception(s): The connection with the server was terminated abnormally
+Took 00:01:33.7068998 to process 150 requests to single_await/wait_service
+Cooling down for 00:02:00... Done.
+
+Iteration 7 of 10
+Took 00:00:03.6799048 to process 150 requests to single_await/await_service
+Cooling down for 00:00:30... Done.
+Took 00:00:04.0194331 to process 150 requests to single_await/return_task_from_service
+Cooling down for 00:00:30... Done.
+56 exception(s): The connection with the server was terminated abnormally
+Took 00:01:33.5932987 to process 150 requests to single_await/wait_service
+Cooling down for 00:02:00... Done.
+
+Iteration 8 of 10
+Took 00:00:06.8286512 to process 150 requests to single_await/await_service
+Cooling down for 00:00:30... Done.
+Took 00:00:05.7684246 to process 150 requests to single_await/return_task_from_service
+Cooling down for 00:00:30... Done.
+28 exception(s): The connection with the server was terminated abnormally
+Took 00:01:34.1004916 to process 150 requests to single_await/wait_service
+Cooling down for 00:02:00... Done.
+
+Iteration 9 of 10
+Took 00:00:08.0523863 to process 150 requests to single_await/await_service
+Cooling down for 00:00:30... Done.
+Took 00:00:04.4100238 to process 150 requests to single_await/return_task_from_service
+Cooling down for 00:00:30... Done.
+56 exception(s): The connection with the server was terminated abnormally
+Took 00:01:33.5312771 to process 150 requests to single_await/wait_service
+Cooling down for 00:02:00... Done.
+
+Iteration 10 of 10
+Took 00:00:06.2510704 to process 150 requests to single_await/await_service
+Cooling down for 00:00:30... Done.
+Took 00:00:04.0858292 to process 150 requests to single_await/return_task_from_service
+Cooling down for 00:00:30... Done.
+56 exception(s): The connection with the server was terminated abnormally
+Took 00:01:33.6909902 to process 150 requests to single_await/wait_service
+Cooling down for 00:02:00... Done.
+Press ENTER to continue . . .
