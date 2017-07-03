@@ -2,27 +2,76 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace TestAwaitApproaches.Client
 {
     class Program
     {
-        private static readonly HttpClient _httpClient = new HttpClient();
+        private static readonly HttpClient _httpClient = new HttpClient()
+        {
+            Timeout = Timeout.InfiniteTimeSpan
+        };
 
         private const int Iterations = 10;
         private const int RequestsPerIteration = 150;
 
+        private static readonly TimeSpan CooldownPeriod = TimeSpan.FromMinutes(2);
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Start");
-            var actions = new string[]
+            bool selectionIsValid = false;
+            char selection = default(char);
+            while (!selectionIsValid)
             {
-                "await_service",
-                "return_task_from_service",
-                "wait_service",
-            };
+                Console.WriteLine("1: Test single-await methods.");
+                Console.WriteLine("2: Test double-await methods.");
+                selection = Console.ReadKey().KeyChar;
+                Console.WriteLine();
 
+                selectionIsValid = (new[] {'1', '2'}).Contains(selection);
+            }
+
+            switch (selection)
+            {
+                case '1':
+                    TestSingleAwaitMethods();
+                    break;
+                case '2':
+                    TestDoubleAwaitMethods();
+                    break;
+            }
+
+            Console.WriteLine("Press ENTER to continue . . .");
+            Console.ReadLine();
+        }
+
+        private static void TestDoubleAwaitMethods()
+        {
+            TestActions(new[]
+            {
+                "double_await/await_service_twice",
+                "double_await/wait_on_first_result",
+                "double_await/wait_on_both_results",
+                "double_await/use_result_then_await",
+                "double_await/use_result_then_result",
+            });
+        }
+
+        private static void TestSingleAwaitMethods()
+        {
+            TestActions(new[]
+            {
+                "single_await/await_service",
+                "single_await/return_task_from_service",
+                "single_await/wait_service",
+            });
+        }
+
+        private static void TestActions(string[] actions)
+        {
+            Console.WriteLine("Start");
             foreach (var action in actions)
             {
                 Console.WriteLine($"Warming {action} up...");
@@ -32,15 +81,12 @@ namespace TestAwaitApproaches.Client
             for (var i = 0; i < Iterations; i++)
             {
                 Console.WriteLine();
-                Console.WriteLine($"Iteration {i+1} of {Iterations}");
+                Console.WriteLine($"Iteration {i + 1} of {Iterations}");
                 foreach (var action in actions)
                 {
                     Test(RequestsPerIteration, action);
                 }
             }
-
-            Console.WriteLine("Press ENTER to continue . . .");
-            Console.ReadLine();
         }
 
         private static void Test(int count, string action)
@@ -61,11 +107,14 @@ namespace TestAwaitApproaches.Client
             }
             catch (AggregateException ae)
             {
-                ae.Handle(e =>
+                var exceptionGroups = ae.InnerExceptions.GroupBy(ie => ie.GetBaseException().Message);
+                foreach (var eg in exceptionGroups)
                 {
-                    Console.WriteLine($"Exception: {e}.");
-                    return true;
-                });
+                    Console.WriteLine($"{eg.Count():N0} exception(s): {eg.Key}");
+                }
+
+                Console.WriteLine($"Cooling down for {CooldownPeriod}");
+                Thread.Sleep(CooldownPeriod);
             }
         }
 

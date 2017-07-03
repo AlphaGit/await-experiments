@@ -3,11 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TestAwaitApproaches.Controllers
 {
-    public class TestController : Controller
+    [Route("single_await")]
+    public class SingleAwaitController : Controller
     {
         private readonly SomeService _someService;
 
-        public TestController(SomeService someService)
+        public SingleAwaitController(SomeService someService)
         {
             _someService = someService;
         }

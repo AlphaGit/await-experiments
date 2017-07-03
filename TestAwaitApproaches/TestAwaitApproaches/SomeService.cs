@@ -8,5 +8,10 @@ namespace TestAwaitApproaches
         {
             return Task.Delay(1500).ContinueWith(_ => "Ok!");
         }
+
+        public Task<string> GetAnotherValue(string initialValue)
+        {
+            return Task.Delay(1500).ContinueWith(_ => initialValue);
+        }
     }
 }
